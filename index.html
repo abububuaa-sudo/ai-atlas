@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atlas JobMatch</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo-area">
+        <img src="atlas-logo.svg" alt="Atlas Logo" class="logo-img" />
+        <span class="logo-text">ATLAS</span>
+      </div>
+      <nav class="nav">
+        <button class="nav-btn" onclick="showPage('home')">Home</button>
+        <button class="nav-btn" onclick="showPage('about')">About Us</button>
+        <button class="nav-btn" onclick="showPage('jobmatch')">Who’s Looking For You</button>
+      </nav>
+    </header>
+
+    <section id="page-home" class="page active">
+      <div class="hero">
+        <h1>Welcome to Atlas</h1>
+        <p>Revolutionizing the way talent meets opportunity. Our AI-powered platform connects you with your dream job through intelligent matching and automated applications.</p>
+        <button class="cta-btn" onclick="showPage('jobmatch')">Discover Opportunities</button>
+      </div>
+    </section>
+
+    <section id="page-about" class="page">
+      <button class="back-btn" onclick="showPage('home')">← Back to Home</button>
+      <div class="about-content">
+        <h2>Our Team</h2>
+        <div class="team-grid">
+          <!-- Team cards inserted via JS -->
+        </div>
+      </div>
+    </section>
+
+    <section id="page-jobmatch" class="page">
+      <button class="back-btn" onclick="showPage('home')">← Back to Home</button>
+      <div class="jobmatch-content">
+        <h2>JobMatch AI — Opportunity Manager</h2>
+        <div class="opportunities-table">
+          <div class="table-header">
+            <div>Company</div>
+            <div>Job Title</div>
+            <div>Date Posted</div>
+            <div>Match %</div>
+            <div>Action</div>
+          </div>
+          <div id="jobs-container"></div>
+        </div>
+        <div id="panel-gap" class="panel panel-gap"></div>
+        <div id="panel-cv" class="panel panel-cv"></div>
+        <div id="panel-cover" class="panel panel-cover"></div>
+        <div id="panel-complete" class="panel panel-complete"></div>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
